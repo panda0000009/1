@@ -256,12 +256,39 @@
 									:value="item.value" />
 							</el-select>
 						</Arrowhead>
-						<div class="yearChart w-full bg-[#112e46]">
+						<!-- TODO:1 -->
+						<div class="yearChart w-full bg-[#112e46]" v-if="activeScenario == 'spatial'">
 							<div class="w-full h-[12.3125rem]">
 								<!-- <pieThird
 									:optionsData="pieThirdOptions"
 									:legend="pieLegendConfig" /> -->
 									<ECharts :option="chartBarFn2()" :resize="false"></ECharts>
+							</div>
+						</div>
+						<!-- TODO:1 -->
+						<div
+							class="job-housing-chart bg-[#112e46] p-4 relative h-[11.625rem]"
+							v-if="activeScenario == 'economy'">
+							<div class="chart-legend absolute left-1/2 
+									-translate-x-1/2
+									flex items-center gap-2 z-2">
+								<div class="legend-item flex items-center">
+									<div class="legend-square safe"></div>
+									<span class="legend-text">安全</span>
+								</div>
+								<div class="legend-item flex items-center">
+									<div class="legend-square warning"></div>
+									<span class="legend-text">警告</span>
+								</div>
+								<div class="legend-item flex items-center">
+									<div class="legend-square danger"></div>
+									<span class="legend-text">危险</span>
+								</div>
+							</div>
+							<div style="width: 100%; height: 100%">
+								<ECharts
+									:option="jobHousingChartOpt()"
+									:resize="false"></ECharts>
 							</div>
 						</div>
 						<Arrowhead
@@ -1545,6 +1572,97 @@
 		} catch (error) {
 			console.error('查询统计数据失败:', error);
 		}
+	};
+	// TODO:1
+	// 动态监控 - 产业智兴
+	const jobHousingChartOpt = indicatorInfo => {
+		let defaultOpt = {
+			grid: {
+				left: '3%',
+				right: '3%',
+				bottom: '0%',
+				top: '28%',
+				containLabel: true
+			},
+			xAxis: {
+				type: 'category',
+				data: barData.value.map(m => m.name),
+				axisLabel: {
+					color: '#fff',
+					fontSize: 12,
+					fontFamily: 'SourceHanSansCN-Regular',
+					margin: 12
+				}
+			},
+			yAxis: {
+				type: 'value',
+				name: `${indicatorInfo?.name || '单位：个'}（${
+					indicatorInfo?.unit || '%'
+				}）`, // '职住比（%）',
+				nameTextStyle: {
+					color: '#B3C0CC',
+					fontSize: 14,
+					align: 'left',
+					padding: [0, 0, 10, 0]
+				},
+				splitLine: {
+					lineStyle: {
+						color: '#35414C',
+						type: 'dashed',
+						width: 1
+					}
+				},
+				axisLabel: {
+					color: '#B3C0CC',
+					fontSize: 14
+				}
+			},
+			series: [
+				{
+					type: 'bar',
+					barWidth: 30,
+					barCategoryGap: '60%',
+					data: barData.value.map(m => m.value),
+					itemStyle: {
+						color: function (params) {
+							const value = params.value;
+							if (value > 1.5) {
+								return new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+									{ offset: 0, color: '#38B4DD' },
+									{ offset: 1, color: '#264188' }
+								]);
+							} else if (value < 1.5) {
+								return new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+									{ offset: 0, color: '#BD3329' },
+									{ offset: 1, color: '#F58F32' }
+								]);
+							} else {
+								return new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+									{ offset: 0, color: '#BD3329' },
+									{ offset: 1, color: '#F58F32' }
+								]);
+							}
+						},
+						borderWidth: 0
+					},
+					label: {
+						show: true,
+						position: 'inside',
+						formatter: '{c}%',
+						textStyle: {
+							color: '#fff',
+							fontSize: 24,
+							fontFamily: 'AlibabaPuHuiTi-75'
+						}
+					}
+				}
+			]
+		};
+
+		if (barChartData.value.afterProject === 0) {
+			return defaultOpt;
+		}
+		return defaultOpt;
 	};
 
 	onMounted(async () => {
