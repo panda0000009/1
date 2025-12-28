@@ -470,19 +470,27 @@
 							:name="'中心外围情况'"
 							direction="left"
 							:isChange="false">
-							<el-select
-								v-model="selectedDistrict"
-								placeholder="请选择查询区域"
-								popper-class="my-popper"
-								size="small"
-								style="width: 5.9375rem; margin-right: 1.375rem"
-								@change="districtSelectedChange">
-								<el-option
-									v-for="item in districtOptions"
-									:key="item.value"
-									:label="item.label"
-									:value="item.value" />
-							</el-select>
+							<div class="flex items-center">
+								<img
+									class="cursor-pointer"
+									src="@/assets/img/sort.png"
+									width="20"
+									alt=""
+									@click="sortHande" />
+								<el-select
+									v-model="selectedDistrict"
+									placeholder="请选择查询区域"
+									popper-class="my-popper"
+									size="small"
+									style="width: 5.9375rem; margin-right: 1.375rem"
+									@change="districtSelectedChange">
+									<el-option
+										v-for="item in districtOptions"
+										:key="item.value"
+										:label="item.label"
+										:value="item.value" />
+								</el-select>
+							</div>
 						</Arrowhead>
 						<!-- TODO:1 -->
 						<div
@@ -816,7 +824,8 @@
 								]);
 							}
 						},
-						borderWidth: 0
+						borderWidth: 0,
+						borderRadius: [10, 10, 10, 10]
 					},
 					label: {
 						show: true,
