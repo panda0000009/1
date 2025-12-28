@@ -489,7 +489,9 @@
 						</Arrowhead>
 						<div
 							class="job-housing-chart bg-[#112e46] p-4 relative h-[11.625rem]">
-							<div class="chart-legend absolute right-4 z-2">
+							<div class="chart-legend absolute left-1/2 
+									-translate-x-1/2
+									flex items-center gap-2 z-2">
 								<div class="legend-item flex items-center">
 									<div class="legend-square safe"></div>
 									<span class="legend-text">安全</span>
@@ -962,7 +964,8 @@
 								]);
 							}
 						},
-						borderWidth: 0
+						borderWidth: 0,
+						borderRadius: [10, 10, 10, 10]
 					},
 					label: {
 						show: true,
