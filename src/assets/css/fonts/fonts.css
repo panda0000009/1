@@ -1,0 +1,195 @@
+/* 阿里巴巴普惠体 */
+@font-face {
+  font-family: 'AlibabaPuHuiTi-35';
+  src: url('./AlibabaPuHuiTi-2-35-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AlibabaPuHuiTi-45';
+  src: url('./AlibabaPuHuiTi-2-45-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AlibabaPuHuiTi-55';
+  src: url('./AlibabaPuHuiTi-2-55-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AlibabaPuHuiTi-65';
+  src: url('./AlibabaPuHuiTi-2-65-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AlibabaPuHuiTi-75';
+  src: url('./AlibabaPuHuiTi-2-75-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AlibabaPuHuiTi-85';
+  src: url('./AlibabaPuHuiTi-2-85-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AlibabaPuHuiTi-95';
+  src: url('./AlibabaPuHuiTi-2-95-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AlibabaPuHuiTi-105';
+  src: url('./AlibabaPuHuiTi-2-105-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AlibabaPuHuiTi-115';
+  src: url('./AlibabaPuHuiTi-2-115-Black.ttf') format('truetype');
+  font-weight: 950;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 优设标题黑 */
+@font-face {
+  font-family: 'YouSheBiaoTiHei';
+  src: url('./优设标题黑.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 思源宋体 */
+@font-face {
+  font-family: 'SourceHanSerifCN-ExtraLight';
+  src: url('./思源宋体1 SourceHanSerifCN-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SourceHanSerifCN-Light';
+  src: url('./思源宋体2 SourceHanSerifCN-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SourceHanSerifCN-Regular';
+  src: url('./思源宋体3 SourceHanSerifCN-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SourceHanSerifCN-Medium';
+  src: url('./思源宋体4 SourceHanSerifCN-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SourceHanSerifCN-SemiBold';
+  src: url('./思源宋体5 SourceHanSerifCN-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SourceHanSerifCN-Bold';
+  src: url('./思源宋体6 SourceHanSerifCN-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SourceHanSerifCN-Heavy';
+  src: url('./思源宋体7 SourceHanSerifCN-Heavy.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 思源黑体 */
+@font-face {
+  font-family: 'SourceHanSansCN-ExtraLight';
+  src: url('./思源黑体1 SourceHanSansCN-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SourceHanSansCN-Light';
+  src: url('./思源黑体2 SourceHanSansCN-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SourceHanSansCN-Normal';
+  src: url('./思源黑体3 SourceHanSansCN-Normal.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SourceHanSansCN-Regular';
+  src: url('./思源黑体4 SourceHanSansCN-Regular.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SourceHanSansCN-Medium';
+  src: url('./思源黑体5 SourceHanSansCN-Medium.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SourceHanSansCN-Bold';
+  src: url('./思源黑体6 SourceHanSansCN-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SourceHanSansCN-Heavy';
+  src: url('./思源黑体7 SourceHanSansCN-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

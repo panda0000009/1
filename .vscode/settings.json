@@ -1,0 +1,55 @@
+{
+	// "files.autoSave": "onFocusChange", //自动保存
+	// "editor.mouseWheelZoom": true, //鼠标滚轮缩放
+	// "editor.fontSize": 13, //字号
+	// "editor.tabSize": 2,
+	// "editor.formatOnSave": true,
+	// "editor.defaultFormatter": "esbenp.prettier-vscode",
+	// "files.trimTrailingWhitespace": true, //保存文件时，删除行尾空格
+
+	/* 配置prettier */
+	// "prettier.printWidth": 80, //超过最大值换行
+	// "prettier.tabWidth": 2, //缩进字节数
+	// "prettier.useTabs": true, //缩进使用tab，不使用空格
+	// "prettier.semi": true, //句尾添加分号
+	// "prettier.singleQuote": true, //单引号
+	// "prettier.proseWrap": "preserve", //默认值。因为使用了一些折行敏感型的渲染器（如GitHub comment）而按照markdown文本样式进行折行
+	// "prettier.arrowParens": "avoid", // (x) => {} 箭头函数参数只有一个时是否要有小括号。avoid：省略括号
+	// "prettier.bracketSpacing": true, //在对象，数组括号与文字之间加空格 "{ foo: bar }"
+	// "prettier.jsxSingleQuote": true, //在jsx中使用单引号代替双引号
+	// "prettier.requireConfig": false, //Require a 'prettierconfig' to format prettier
+	// "prettier.trailingComma": "none", //在所有可能的多行中添加尾随逗号
+	// "prettier.endOfLine": "lf",
+	// "prettier.bracketSameLine": true,
+	// "prettier.vueIndentScriptAndStyle": true,
+	// "prettier.singleAttributePerLine": false,
+
+	// //原生复现 彩色括号
+	// "workbench.colorCustomizations": {
+	// 	"editorBracketHighlight.foreground1": "#ffd700",
+	// 	"editorBracketPairGuide.activeBackground1": "#ffd7007f",
+	// 	"editorBracketHighlight.foreground2": "#da70d6",
+	// 	"editorBracketPairGuide.activeBackground2": "#da70d67f",
+	// 	"editorBracketHighlight.foreground3": "#87cefa",
+	// 	"editorBracketPairGuide.activeBackground3": "#87cefa7f",
+	// 	"editorBracketHighlight.foreground4": "#ffd700",
+	// 	"editorBracketPairGuide.activeBackground4": "#ffd7007f",
+	// 	"editorBracketHighlight.foreground5": "#da70d6",
+	// 	"editorBracketPairGuide.activeBackground5": "#da70d67f",
+	// 	"editorBracketHighlight.foreground6": "#87cefa",
+	// 	"editorBracketPairGuide.activeBackground6": "#87cefa7f",
+	// 	"editorBracketHighlight.unexpectedBracket.foreground": "#ff0000"
+	// },
+	// //不显示欢迎页
+	// "workbench.startupEditor": "none",
+	// "files.autoSaveDelay": 0,
+	// "[javascript]": {
+	// 	"editor.defaultFormatter": "esbenp.prettier-vscode"
+	// },
+	// "[html]": {
+	// 	"editor.defaultFormatter": "esbenp.prettier-vscode"
+	// },
+	// "[vue]": {
+	// 	"editor.defaultFormatter": "esbenp.prettier-vscode"
+	// }
+}

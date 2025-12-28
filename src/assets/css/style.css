@@ -1,0 +1,327 @@
+:root {
+	/* 配色规范 */
+	/* 主色 */
+	--color-primary: #1fc6ff;
+
+	/* 辅助色 */
+	--color-secondary-yellow: #f5e74f;
+	--color-secondary-cyan: #59ffff;
+	--color-secondary-orange: #ff911f;
+	--color-secondary-pink: #ff386b;
+
+	/* 文字颜色 */
+	--color-text-primary: #ffffff;
+	--color-text-secondary: #b4c0cc;
+	--color-text-tertiary: #a2b0b8;
+
+	/* 字体规范 */
+	/* 中文字体 - 标题 */
+	--font-family-chinese-title: 'Source Han Sans CN', '思源黑体', sans-serif;
+	/* 中文字体 - 正文字体 */
+	--font-family-chinese-text: 'Source Han Sans CN', '思源黑体', sans-serif;
+	/* 数字/英文字体 - 标题 */
+	--font-family-en-title: 'FURORE', sans-serif;
+	/* 数字/英文字体 - 正文字体 */
+	--font-family-en-text: 'Source Han Sans CN', '思源黑体', sans-serif;
+
+	/* 字体大小 */
+	/* 主标题 */
+	--font-size-main-title: 32px;
+	/* 一级标题 */
+	--font-size-level-1-title: 20px;
+	/* 重要文字内容 */
+	--font-size-important-text: 16px;
+	--font-size-important-text-mobile: 18px;
+	/* 一般文字内容 */
+	--font-size-normal-text: 14px;
+	--font-size-normal-text-mobile: 16px;
+	/* 较弱文字内容 */
+	--font-size-weak-text: 12px;
+	--font-size-weak-text-mobile: 14px;
+	/* 数字标题 */
+	--font-size-number-title: 36px;
+	/* 重要数字 */
+	--font-size-important-number: 20px;
+	/* 一般数字 */
+	--font-size-normal-number: 16px;
+	/* 较弱数字 */
+	--font-size-weak-number: 12px;
+	--font-size-weak-number-mobile: 14px;
+
+	/* 字体粗细 */
+	--font-weight-bold: bold;
+	--font-weight-medium: 500;
+	--font-weight-regular: 400;
+
+	/* 段落格式 */
+	--line-height-normal: 1.5;
+	--line-height-title: 1.2;
+
+	/* 背景色 */
+	--color-background: #000000;
+	--color-background-dark: #121826;
+
+	/* 边框颜色 */
+	--color-border: #2a364d;
+	--color-border-light: #3e4a61;
+
+	/* 间距 */
+	--spacing-xs: 4px;
+	--spacing-sm: 8px;
+	--spacing-md: 16px;
+	--spacing-lg: 24px;
+	--spacing-xl: 32px;
+	--spacing-xxl: 48px;
+
+	/* 圆角 */
+	--radius-sm: 4px;
+	--radius-md: 8px;
+	--radius-lg: 12px;
+	--radius-xl: 16px;
+
+	/* 阴影 */
+	--shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+	--shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+	--shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+	/* 动画 */
+	--transition-fast: 0.2s ease;
+	--transition-normal: 0.3s ease;
+	--transition-slow: 0.5s ease;
+}
+
+body {
+	font-family: var(--font-family-chinese-text), var(--font-family-en-text);
+	font-size: var(--font-size-normal-text);
+	font-weight: var(--font-weight-regular);
+	line-height: var(--line-height-normal);
+	color: var(--color-text-primary);
+	background-color: var(--color-background);
+	overflow-x: hidden;
+}
+
+/* 标题样式 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-family-chinese-title), var(--font-family-en-title);
+	font-weight: var(--font-weight-bold);
+	line-height: var(--line-height-title);
+	color: var(--color-text-primary);
+	margin-bottom: var(--spacing-md);
+}
+
+h1 {
+	font-size: var(--font-size-main-title);
+}
+
+h2 {
+	font-size: var(--font-size-level-1-title);
+}
+
+strong {
+	font-weight: var(--font-weight-bold);
+	color: var(--color-text-primary);
+}
+
+/* 数字样式 */
+.number-display {
+	font-family: var(--font-family-en-title);
+	font-weight: var(--font-weight-bold);
+	color: var(--color-primary);
+}
+
+.number-large {
+	font-size: var(--font-size-number-title);
+}
+
+.number-medium {
+	font-size: var(--font-size-important-number);
+}
+
+.number-small {
+	font-size: var(--font-size-normal-number);
+}
+
+.pages {
+	width: 100%;
+	height: 100%;
+}
+
+/* 链接样式 */
+a {
+	color: var(--color-primary);
+	text-decoration: none;
+	transition: color var(--transition-fast);
+}
+
+a:hover {
+	color: var(--color-secondary-cyan);
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--color-background-dark);
+}
+
+::-webkit-scrollbar-thumb {
+	background: #417bd6;
+	border-radius: var(--radius-md);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #417bd6;
+}
+.relative {
+	position: relative;
+}
+.my-popper .el-select {
+	overflow: hidden;
+	margin-left: auto;
+}
+.el-select__wrapper {
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	background: #16415c !important;
+	border: 1px solid #7edcfb !important;
+}
+.bgConfig .el-select__wrapper {
+	box-shadow: 0 0 0 1px var(--el-border-color-hover) inset !important;
+}
+
+.el-select__popper.el-popper,
+.el-select__popper.el-popper .el-popper__arrow:before {
+	border: 1px solid #7edcfb !important;
+}
+.my-popper .el-select-dropdown {
+	color: #fff !important;
+	padding: 0 !important;
+	overflow: hidden;
+	background-color: #112e46 !important;
+}
+.my-popper .el-select-dropdown__item {
+	background-color: #112e46 !important;
+	color: #979797 !important;
+	border-bottom: 1px solid #fff !important;
+	&:last-child {
+		border-bottom: none !important;
+	}
+}
+.el-select__placeholder.is-transparent {
+	color: #979797 !important;
+}
+.el-select__placeholder {
+	color: white !important;
+}
+.my-popper.el-select__caret {
+	color: #7edcfb;
+}
+.el-select-dropdown__footer {
+	color: #1fc6ff !important;
+}
+
+.my-popper .el-select-dropdown__item:hover,
+.my-popper .el-select-dropdown__item.is-active,
+.my-popper .el-select-dropdown__item.is-selected,
+.my-popper .el-select-dropdown__item.selected {
+	background-color: #0f7b9f !important;
+	color: #fff !important;
+}
+
+.my-popper .el-select-dropdown__item:hover,
+.my-popper .el-select-dropdown__item.is-active,
+.my-popper .el-select-dropdown__item.selected {
+	color: #fff !important;
+	background-color: #0f7b9f !important;
+}
+.my-popper .el-select-dropdown__list {
+	padding: 0 !important;
+}
+
+/* 整体滚动条 */
+::-webkit-scrollbar {
+	width: 4px;
+}
+/* 滑块轨道 */
+::-webkit-scrollbar-track {
+	border-radius: 6px;
+}
+/* 滑块 */
+::-webkit-scrollbar-thumb {
+	background-color: #04a7ff;
+	border-radius: 6px;
+}
+/* 滑块悬停效果 */
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(65, 123, 214, 1);
+}
+
+.pointer {
+	cursor: pointer;
+}
+.ol-full-screen,
+.ol-full-screen-false {
+	display: none;
+}
+.zbTitle {
+	font-family: 'YouSheBiaoTiHei';
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 100%;
+	text-align: right;
+	top: 0;
+}
+.mapConTitle {
+	top: 2rem;
+	left: 32.5rem;
+	z-index: 99;
+	font-family: 'YouSheBiaoTiHei';
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 100%;
+	text-align: center;
+	color: #979797;
+}
+
+.left {
+	overflow: hidden;
+	overflow-y: auto;
+	max-height: 55.25rem;
+}
+.futuredanyaunItem {
+	padding: 0 0.625rem;
+	min-width: 5.375rem;
+	height: 2rem;
+	line-height: 2rem;
+	text-align: center;
+	color: #fff;
+	font-size: 0.875rem;
+	font-weight: 400;
+	font-family: 'YouSheBiaoTiHei';
+	background-image: url('@/assets/img/futureMirror/bg.png');
+	background-size: 100% 100%;
+}
+
+.el-input .el-input__wrapper {
+	border: 1px solid #7edcfb !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	background: none !important;
+}
+
+.el-input .el-input__inner {
+	color: white;
+}
+
+.el-switch.is-checked .el-switch__core {
+	background-color: #c4ccf8 !important;
+	border-color: #c4ccf8 !important;
+}
