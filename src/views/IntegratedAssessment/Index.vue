@@ -484,9 +484,37 @@
 									:value="item.value" />
 							</el-select>
 						</Arrowhead>
+						<!-- TODO:1 -->
 						<div
+							v-if="activeScenario == 'spatial'"
 							class="job-housing-chart bg-[#112e46] p-4 relative h-[11.625rem]">
 							<div class="chart-legend absolute right-4 z-2">
+								<div class="legend-item flex items-center">
+									<div class="legend-square safe"></div>
+									<span class="legend-text">安全</span>
+								</div>
+								<div class="legend-item flex items-center">
+									<div class="legend-square warning"></div>
+									<span class="legend-text">警告</span>
+								</div>
+								<div class="legend-item flex items-center">
+									<div class="legend-square danger"></div>
+									<span class="legend-text">危险</span>
+								</div>
+							</div>
+							<div style="width: 100%; height: 100%">
+								<ECharts
+									:option="jobHousingChartOpt()"
+									:resize="false"></ECharts>
+							</div>
+						</div>
+						<!-- TODO:1 -->
+						<div
+							v-if="activeScenario == 'economy'"
+							class="job-housing-chart bg-[#112e46] p-4 relative h-[11.625rem]">
+							<div class="chart-legend absolute left-1/2 
+									-translate-x-1/2
+									flex items-center gap-2 z-2">
 								<div class="legend-item flex items-center">
 									<div class="legend-square safe"></div>
 									<span class="legend-text">安全</span>
@@ -537,12 +565,37 @@
 								</el-select>
 							</div>
 						</Arrowhead>
-						<div class="duibi bg-[#112e46]">
+						<div class="duibi bg-[#112e46]" v-if="activeScenario == 'spatial'">
 							<WarningInfo
 								:warningList="warningList"
 								:zbList="zbList"
 								:warningValue2="warningValue2"
 								:activeZb="activeZb"></WarningInfo>
+						</div>
+						<div
+							v-if="activeScenario == 'economy'"
+							class="job-housing-chart bg-[#112e46] p-4 relative h-[11.625rem]">
+							<div class="chart-legend absolute left-1/2 
+									-translate-x-1/2
+									flex items-center gap-2 z-2">
+								<div class="legend-item flex items-center">
+									<div class="legend-square safe"></div>
+									<span class="legend-text">安全</span>
+								</div>
+								<div class="legend-item flex items-center">
+									<div class="legend-square warning"></div>
+									<span class="legend-text">警告</span>
+								</div>
+								<div class="legend-item flex items-center">
+									<div class="legend-square danger"></div>
+									<span class="legend-text">危险</span>
+								</div>
+							</div>
+							<div style="width: 100%; height: 100%">
+								<ECharts
+									:option="jobHousingChartOpt()"
+									:resize="false"></ECharts>
+							</div>
 						</div>
 					</div>
 				</div>
