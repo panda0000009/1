@@ -979,7 +979,74 @@
 									:value="item.value" />
 							</el-select>
 						</Arrowhead>
-						<div
+						<!-- TODO:1 -->
+						<div class="pl-[0.875rem] mt-[0.75rem] h-[calc(100%-17rem)]">
+							<div class="dbTable w-[23.125rem] h-full">
+								<DbTableHeader
+									:list="[
+										{ name: '行政区划', class: 'w-30' },
+										{ name: '龙头项目', class: 'w-30' },
+										{ name: '政策补贴', class: 'w-30' },
+										{ name: '人才引进', class: 'w-30' },
+										{ name: '政策补贴', class: 'w-30' }
+									]"></DbTableHeader>
+								<div class="dbTableBody">
+									<div
+										class="dbTableRow"
+										v-for="item in resultQuery"
+										:key="item"
+										style="font-size: 14px">
+										<span class="w-30 truncate" :title="item.indicatorName">{{
+											item.indicatorName
+										}}</span>
+										<span
+											class="flex-1 truncate"
+											:class="
+												Number(item.changeRate) < 0
+													? 'green'
+													: Number(item.changeRate) > 0
+													? 'red'
+													: ''
+											"
+											:title="convertData(item.monitorValue + item?.unit)"
+											>{{ convertData(item.monitorValue + item?.unit) }}</span
+										>
+										<span
+											class="flex-1 truncate"
+											:class="
+												Number(item.changeRate) < 0
+													? 'green'
+													: Number(item.changeRate) > 0
+													? 'red'
+													: ''
+											"
+											:title="convertData(item.predictValue + item?.unit)"
+											>{{ convertData(item.predictValue + item?.unit) }}</span
+										>
+										<span
+											class="w-[5.625rem] !color-white flex items-center justify-center">
+											<img
+												class="mr-2"
+												src="@/assets/img/TimeSpaceRadar/up.png"
+												alt=""
+												width="13"
+												height="10"
+												v-if="Number(item.changeRate) > 0" />
+											<img
+												class="mr-2"
+												src="@/assets/img/TimeSpaceRadar/down.png"
+												alt=""
+												width="13"
+												height="10"
+												v-if="Number(item.changeRate) < 0" />
+											{{ Number(item.changeRate) < 0 ? '' : '+'
+											}}{{ (item.changeRate * 100).toFixed(2) }}%
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- <div
 							class="job-housing-chart bg-[#112e46] p-4 pb-2 relative h-[11.625rem]">
 							<div
 								class="chart-legend flex gap-2 absolute right-4 z-2 left-[60%]">
@@ -997,7 +1064,7 @@
 									:option="jobHousingChartOpt()"
 									:resize="false"></ECharts>
 							</div>
-						</div>
+						</div> -->
 						<Arrowhead
 							class="my-3"
 							name="区县镇街情况"
@@ -1025,9 +1092,76 @@
 								</el-select>
 							</div>
 						</Arrowhead>
-						<div class="bg-[#112E46] w-full h-[18.625rem] pt-4">
+							<!-- TODO:1 -->
+							<div class="pl-[0.875rem] mt-[0.75rem] h-[calc(100%-17rem)]">
+								<div class="dbTable w-[23.125rem] h-full">
+									<DbTableHeader
+										:list="[
+										{ name: '行政区划', class: 'w-30' },
+										{ name: '龙头项目', class: 'w-30' },
+										{ name: '政策补贴', class: 'w-30' },
+										{ name: '人才引进', class: 'w-30' },
+										{ name: '政策补贴', class: 'w-30' }
+										]"></DbTableHeader>
+									<div class="dbTableBody">
+										<div
+											class="dbTableRow"
+											v-for="item in resultQuery"
+											:key="item"
+											style="font-size: 14px">
+											<span class="w-30 truncate" :title="item.indicatorName">{{
+												item.indicatorName
+											}}</span>
+											<span
+												class="flex-1 truncate"
+												:class="
+													Number(item.changeRate) < 0
+														? 'green'
+														: Number(item.changeRate) > 0
+														? 'red'
+														: ''
+												"
+												:title="convertData(item.monitorValue + item?.unit)"
+												>{{ convertData(item.monitorValue + item?.unit) }}</span
+											>
+											<span
+												class="flex-1 truncate"
+												:class="
+													Number(item.changeRate) < 0
+														? 'green'
+														: Number(item.changeRate) > 0
+														? 'red'
+														: ''
+												"
+												:title="convertData(item.predictValue + item?.unit)"
+												>{{ convertData(item.predictValue + item?.unit) }}</span
+											>
+											<span
+												class="w-[5.625rem] !color-white flex items-center justify-center">
+												<img
+													class="mr-2"
+													src="@/assets/img/TimeSpaceRadar/up.png"
+													alt=""
+													width="13"
+													height="10"
+													v-if="Number(item.changeRate) > 0" />
+												<img
+													class="mr-2"
+													src="@/assets/img/TimeSpaceRadar/down.png"
+													alt=""
+													width="13"
+													height="10"
+													v-if="Number(item.changeRate) < 0" />
+												{{ Number(item.changeRate) < 0 ? '' : '+'
+												}}{{ (item.changeRate * 100).toFixed(2) }}%
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						<!-- <div class="bg-[#112E46] w-full h-[18.625rem] pt-4">
 							<ECharts :option="jdChartOpt" :resize="false"></ECharts>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</template>
